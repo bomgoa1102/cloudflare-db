@@ -1,5 +1,5 @@
 const encoder = new TextEncoder();
-const ITERATIONS = 210000;
+const ITERATIONS = 100000;
 const SESSION_SECONDS = 60 * 60 * 24 * 7;
 const json = (data, status = 200, headers = {}) => Response.json(data, { status, headers: { 'Cache-Control': 'no-store', ...headers } });
 const hex = bytes => Array.from(new Uint8Array(bytes), b => b.toString(16).padStart(2, '0')).join('');
