@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f6">
+  <title>Cloudflare D1 · Login demo</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar"><a class="brand" href="/"><span class="brand-mark">✳</span> edge<span>notes</span><span class="brand-dot">.</span></a><span class="demo-badge"><span></span> PROJECT DEMO</span></header>
+    <main>
+      <section class="intro">
+        <div class="eyebrow"><span class="eyebrow-line"></span> MỘT DEMO NHỎ, MỘT Ý TƯỞNG LỚN</div>
+        <h1>Xin chào,<br><em>thế giới.</em></h1>
+        <p class="intro-copy">Một nơi nhỏ để khám phá cách ứng dụng kết nối với cơ sở dữ liệu trên Cloudflare.</p>
+        <div class="diagram" aria-label="Trình duyệt kết nối Cloudflare Workers và D1 Database">
+          <div class="diagram-node"><span class="node-icon">↗</span><span>TRÌNH DUYỆT</span></div><span class="connector">········</span><div class="diagram-node"><span class="node-icon orange">☁</span><span>WORKERS</span></div><span class="connector">········</span><div class="diagram-node"><span class="node-icon green">▤</span><span>D1 DATABASE</span></div>
+        </div>
+        <div class="intro-foot"><span class="asterisk">✳</span><p>Được xây dựng để học hỏi.<br><strong>Đơn giản, nhanh chóng và thú vị.</strong></p></div>
+      </section>
+      <section class="card-wrap">
+        <div class="card" id="auth-card">
+          <div class="card-top"><span class="card-icon">↗</span><span class="card-index">01 / BẮT ĐẦU</span></div>
+          <div id="auth-view">
+            <h2 id="title">Chào mừng trở lại<span>.</span></h2>
+            <p class="subtitle" id="subtitle">Đăng nhập để tiếp tục hành trình của bạn.</p>
+            <div class="tabs" role="tablist" aria-label="Tài khoản"><button type="button" class="tab active" id="login-tab" role="tab" aria-selected="true">Đăng nhập</button><button type="button" class="tab" id="register-tab" role="tab" aria-selected="false">Tạo tài khoản</button></div>
+            <form id="auth-form">
+              <label for="email">ĐỊA CHỈ EMAIL</label><input id="email" name="email" type="email" placeholder="ban@example.com" autocomplete="email" required maxlength="254">
+              <div class="label-row"><label for="password">MẬT KHẨU</label><span>Ít nhất 8 ký tự</span></div><input id="password" name="password" type="password" placeholder="Nhập mật khẩu của bạn" autocomplete="current-password" required minlength="8" maxlength="128">
+              <p class="message" id="message" role="status" aria-live="polite"></p>
+              <button class="submit" id="submit" type="submit"><span>Đăng nhập</span><span>↗</span></button>
+            </form>
+            <p class="card-note"><span>✳</span> Tài khoản được lưu trong Cloudflare D1.</p>
+          </div>
+          <div id="user-view" hidden><div class="success-icon">✓</div><h2>Bạn đã vào rồi<span>.</span></h2><p class="subtitle">Phiên đăng nhập của bạn đang hoạt động.</p><div class="user-box"><span>TÀI KHOẢN CỦA BẠN</span><strong id="user-email"></strong><small>● Đã kết nối với D1</small></div><p class="message" id="user-message" role="status" aria-live="polite"></p><button class="submit" id="logout" type="button"><span>Đăng xuất</span><span>↗</span></button></div>
+        </div>
+        <p class="under-card">MỘT CHIẾC DEMO NHỎ TỪ ĐÁM MÂY <span>✳</span></p>
+      </section>
+    </main>
+    <footer><span>© 2026 EDGENOTES PROJECT</span><span>BUILT ON THE EDGE <span class="footer-star">✳</span></span></footer>
+  </div>
+</body>
+</html>

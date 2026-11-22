@@ -1,0 +1,13 @@
+{
+  "name": "cloudflare-d1-login-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "db:local": "wrangler d1 migrations apply login-demo-db --local",
+    "db:remote": "wrangler d1 migrations apply login-demo-db --remote",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": { "wrangler": "^4.0.0" }
+}
